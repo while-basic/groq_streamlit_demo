@@ -3,8 +3,7 @@ from typing import Generator
 from groq import Groq
 
 st.set_page_config(page_icon="💬", layout="wide",
-                   page_title="Groq Goes Brrrrrrrr...")
-
+                   page_title="Groq Chatbot")
 
 def icon(emoji: str):
     """Shows an emoji as a Notion-style page icon."""
@@ -13,10 +12,9 @@ def icon(emoji: str):
         unsafe_allow_html=True,
     )
 
-
 icon("🏎️")
 
-st.subheader("Groq Chat Streamlit App", divider="rainbow", anchor=False)
+st.subheader("Groq Chatbot", divider="rainbow", anchor=False)
 
 client = Groq(
     api_key=st.secrets["GROQ_API_KEY"],
